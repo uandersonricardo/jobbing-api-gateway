@@ -1,4 +1,8 @@
-const Fruits = [{ id: "1", name: "orange" }, { id: "2", name: "strawberry" }, { id: "3", name: "coconut" }];
+const Fruits = [
+  { id: '1', name: 'orange' },
+  { id: '2', name: 'strawberry' },
+  { id: '3', name: 'coconut' }
+];
 
 const fruitResolver = {
   Query: {
@@ -7,7 +11,7 @@ const fruitResolver = {
     },
     fruit(_, { id }) {
       return Fruits.find(item => item.id === id);
-    },
+    }
   },
   Mutation: {
     createFruit(_, { fruit }) {
@@ -18,8 +22,8 @@ const fruitResolver = {
     },
     deleteFruit(_, { id }) {
       return Fruits.find(item => item.id === id);
-    },
-  },
+    }
+  }
 };
 
 module.exports = fruitResolver;
