@@ -10,10 +10,18 @@ const app = express();
 app.use(cors());
 app.use(morgan('dev'));
 
-const typeDefs = require('./typeDefs');
+const typeDefs = require('./type-defs');
 const resolvers = require('./resolvers');
+const dataSources = require('./data-sources');
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  dataSources,
+  context: () => ({
+    token: 'temp'
+  })
+});
 
 server.applyMiddleware({ app });
 

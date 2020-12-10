@@ -4,6 +4,7 @@ const query = gql`
   type Query {
     fruits: [Fruit]
     fruit(id: ID!): Fruit
+    users: [User]
   }
 `;
 

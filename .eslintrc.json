@@ -22,6 +22,7 @@
     "no-console": "off",
     "arrow-parens": "off",
     "import/no-dynamic-require": "off",
+    "implicit-arrow-linebreak": "off",
     "global-require": "off"
   }
 }

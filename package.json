@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/uandersonricardo/jobbing-api-gateway#readme",
   "dependencies": {
+    "apollo-datasource-rest": "^0.9.5",
     "apollo-server-express": "^2.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",

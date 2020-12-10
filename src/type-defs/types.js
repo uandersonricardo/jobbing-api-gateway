@@ -5,6 +5,11 @@ const types = gql`
     id: ID!
     name: String
   }
+
+  type User {
+    id: ID!
+    name: String
+  }
 `;
 
 module.exports = types;
