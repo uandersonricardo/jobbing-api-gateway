@@ -18,9 +18,11 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   dataSources,
-  context: () => ({
-    token: 'temp'
-  })
+  context: ({ req }) => {
+    const token = req.headers.authorization || '';
+
+    return { token };
+  }
 });
 
 server.applyMiddleware({ app });
