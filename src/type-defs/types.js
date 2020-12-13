@@ -1,14 +1,32 @@
 const { gql } = require('apollo-server-express');
 
 const types = gql`
-  type Fruit {
-    id: ID!
-    name: String
+  type Account {
+    _id: ID!
+    name: String!
+    email: String!
+    photo: String
+    bio: String!
+    city: String!
+    state: String!
+    country: String!
+    _company: Company
+    _applicant: Applicant
   }
 
-  type User {
-    id: ID!
-    name: String
+  type Applicant {
+    birthday: String!
+    gender: String!
+    maritalStatus: String!
+    educationLevel: String!
+    salaryExpectation: Float!
+    areaOfInterest: String!
+  }
+
+  type Company {
+    sector: String!
+    size: Int!
+    foundation: String!
   }
 `;
 

@@ -2,9 +2,9 @@ const { gql } = require('apollo-server-express');
 
 const query = gql`
   type Query {
-    fruits: [Fruit]
-    fruit(id: ID!): Fruit
-    users: [User]
+    validate: Account
+    accounts: [Account]
+    account(id: ID!): Account
   }
 `;
 
